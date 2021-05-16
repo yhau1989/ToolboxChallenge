@@ -1,2 +1,2 @@
 # TolboxChallenge
-FULL STACK DEVELOPER (NODEJS - REACT) - REMOTE, Code Challenge
+FULL STACK DEVELOPER (NODEJS - REACT), Code Challenge
