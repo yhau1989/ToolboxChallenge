@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import {url_api} from "../config";
+import { url_api } from "../config";
 
 export default function SearchNav(props) {
   const [inptext, setInptext] = useState("");
@@ -13,7 +13,10 @@ export default function SearchNav(props) {
       if (inptext.trim().length > 0) {
         fetch(`${url_api}${_texto}`)
           .then((res) => res.json())
-          .then((data) => process({ ...data, texto: _texto }))
+          .then((data) => {
+            process({ ...data, texto: _texto });
+            setInptext("");
+          })
           .catch((err) => console.log("fecth error", err));
       } else {
         alert("Text no valid");
